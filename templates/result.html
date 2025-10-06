@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-success text-white">
+        <h2 class="mb-0">Hasil Diagnosa</h2>
+    </div>
+    <div class="card-body">
+        {% if results %}
+            <div class="alert alert-info">
+                Berikut adalah hasil diagnosa berdasarkan gejala yang Anda pilih:
+            </div>
+            
+            {% for result in results %}
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="mb-0">{{ result.name }} <span class="badge bg-primary">{{ result.match_percentage }}% Cocok</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Solusi:</h6>
+                        <p>{{ result.solution }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-warning">
+                Tidak ada penyakit yang terdeteksi berdasarkan gejala yang dipilih. 
+                Silakan periksa kembali gejala yang Anda alami atau konsultasikan dengan ahli pertanian.
+            </div>
+        {% endif %}
+        
+        <div class="mt-4">
+            <a href="{{ url_for('diagnosa') }}" class="btn btn-outline-primary">Kembali ke Form Diagnosa</a>
+            <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Kembali ke Beranda</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

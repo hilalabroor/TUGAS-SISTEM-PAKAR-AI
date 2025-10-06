@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron text-center py-5">
+    <h1 class="display-4">Sistem Pakar Diagnosa Penyakit Padi</h1>
+    <p class="lead">Sistem ini membantu Anda mendiagnosa penyakit pada tanaman padi berdasarkan gejala yang diamati.</p>
+    <hr class="my-4">
+    <p>Klik tombol di bawah untuk memulai diagnosa.</p>
+    <a class="btn btn-success btn-lg" href="{{ url_for('diagnosa') }}" role="button">Mulai Diagnosa</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Diagnosa Penyakit</h5>
+                <p class="card-text">Temukan jenis penyakit padi berdasarkan gejala yang Anda amati di lahan Anda.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Solusi Tepat</h5>
+                <p class="card-text">Dapatkan rekomendasi penanganan yang tepat untuk penyakit yang terdiagnosa.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Ahli Pertanian</h5>
+                <p class="card-text">Dikembangkan dengan pengetahuan dari para ahli pertanian berpengalaman.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

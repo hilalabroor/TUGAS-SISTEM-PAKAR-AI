@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-success text-white">
+        <h2 class="mb-0">Tentang Sistem Pakar</h2>
+    </div>
+    <div class="card-body">
+        <h4>Metode Forward Chaining</h4>
+        <p>
+            Sistem ini menggunakan metode <strong>Forward Chaining</strong> dalam melakukan diagnosa penyakit padi. 
+            Forward Chaining adalah metode penalaran yang dimulai dari data atau fakta yang diketahui (gejala) 
+            menuju pada kesimpulan (diagnosa penyakit).
+        </p>
+        
+        <h4 class="mt-4">Alur Kerja</h4>
+        <ol>
+            <li>Pengguna memilih gejala-gejala yang diamati pada tanaman padi</li>
+            <li>Sistem mencocokkan gejala yang dipilih dengan basis pengetahuan yang ada</li>
+            <li>Sistem memberikan hasil diagnosa beserta solusi penanganannya</li>
+        </ol>
+        
+        <h4 class="mt-4">Pengembang</h4>
+        <div class="card">
+            <div class="card-body">
+                <P class="card-title">Fadila Rahmania (F1D02310048)</P>
+                <p class="card-text">Fitri Nufa Dastana (F1D02310052)</p> 
+                <p class="card-text">Yusri Abdi (F1D02310098)</p>
+                <p class="card-text">Izzat Nazhiefa (F1D02310114)</p>
+                <p class="card-text">M. Wahyu Hilal Abroor (F1D02310123)</p>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Kembali ke Beranda</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
